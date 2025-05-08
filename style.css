@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #111;
+}
+#tiny{
+  font-weight: lighter;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background: url("media/imgs/ChatGPTWide.png") no-repeat center center/cover;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #00ccff;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+.about-section {
+  margin-right: 15vw;
+  margin-left: 15vw;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  display: grid;
+  height: auto;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+  transition: transform 0.1s ease;
+}
+
+.about-section:hover {
+  transform: scale(1.05);
+}
+
+.about-item {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 100%;
+  text-align: justify;
+  height: auto;
+  display: block;
+  color: white;
+  
+}
+
+
+.grid-section {
+  display: grid;
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+  color: white;
+}
+
+.grid-item {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.grid-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.grid-text {
+  position: absolute;
+  bottom: 10%;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px 30px;
+  text-align: justify;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.grid-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.grid-image-wrapper:hover .grid-text {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  z-index: 999;
+}
+
+.grid-item img:hover {
+  transform: scale(1.05);
+}
+
+.contact-section {
+  padding: 10vh 20vw;
+  background-color: #111;
+  color: white;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.contact-section label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: 1px solid #555;
+  color: white;
+  border-radius: 4px;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  outline: none;
+  border-color: #00ccff;
+}
+
+.contact-section .btn {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-section .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.site-footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "social"
+    "copy";
+}
+.footerHorizontal{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.footer-logo {
+  grid-area: logo;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.footer-nav,
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a,
+.footer-social a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: #00ccff;
+}
+
+.footer-copy {
+  grid-area: copy;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
