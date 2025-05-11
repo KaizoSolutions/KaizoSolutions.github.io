@@ -30,13 +30,12 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
+  animation: NavBarfadeIn 1s;
 }
 
 .logo {
-  font-size: 24px;
   height: 24px;
   width: auto;
-  font-weight: bold;
 }
 
 .menu {
@@ -89,8 +88,8 @@ header {
 }
 
 .about-section {
-  margin-right: 15vw;
-  margin-left: 15vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
   padding-top: 5vh;
   padding-bottom: 10vh;
   display: grid;
@@ -108,8 +107,6 @@ header {
 .about-item {
   padding-top: 5vh;
   padding-bottom: 5vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
   width: 100%;
   text-align: justify;
   height: auto;
@@ -187,13 +184,13 @@ header {
 }
 
 .contact-section {
-  padding: 10vh 20vw;
+  padding: 10vh 10vw;
   background-color: #111;
   color: white;
 }
 
 .contact-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -206,6 +203,9 @@ header {
 .contact-section label {
   display: block;
   margin: 10px 0 5px;
+}
+.contact-section p{
+  font-size: .8rem;
 }
 
 .contact-section input,
@@ -267,8 +267,6 @@ header {
 
 .footer-logo {
   grid-area: logo;
-  font-size: 1.8rem;
-  font-weight: bold;
 }
 
 .footer-nav,
@@ -301,6 +299,14 @@ header {
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -60%); }
   to { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes NavBarfadeIn {
+  from { opacity: 0; transform: translate(0, -60%); }
+  to { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes NavBarfadeOut {
+  from { opacity: 1; transform: translate(0, 0); }
+  to { opacity: 0; transform: translate(0, -60%); }
 }
 
 @media only screen and (max-width: 1000px) {
