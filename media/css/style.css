@@ -7,18 +7,19 @@
 body, html {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  background-color: #111;
+  background-color: var(--backgroudColor);
 }
 #tiny{
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 
 header {
   position: relative;
   height: 100vh;
-  background: url("media/imgs/ChatGPTWide.png") no-repeat center center/cover;
-  color: white;
+  z-index: 999;
+  background: var(--backGroundImg);
+  color: var(--textfont2);
 }
 
 .navbar {
@@ -26,7 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--navBarColor);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -45,13 +46,13 @@ header {
 }
 
 .menu a {
-  color: white;
+  color: var(--textFont);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .menu a:hover {
-  color: #00ccff;
+  color: var(--highLight);
 }
 
 .hero {
@@ -76,15 +77,15 @@ header {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid var(--textFont);
+  color: var(--textFont);
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background: white;
-  color: black;
+  background: var(--textFont);
+  color: var(--textFont3);
 }
 
 .about-section {
@@ -111,7 +112,7 @@ header {
   text-align: justify;
   height: auto;
   display: block;
-  color: white;
+  color: var(--textFont);
   
 }
 
@@ -122,7 +123,7 @@ header {
   margin-right: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5px;
-  color: white;
+  color: var(--textFont);
 }
 
 .grid-item {
@@ -156,8 +157,8 @@ header {
   bottom: 10%;
   margin-left: 0px;
   margin-right: 0px;
-  color: white;
-  background: rgba(0, 0, 0, 0.3);
+  color: var(--textfont2);
+  background: var(--imageTextBackgroud);
   padding: 30px 30px;
   text-align: justify;
   font-size: 1rem;
@@ -170,7 +171,7 @@ header {
 }
 
 .grid-image-wrapper:hover .grid-text {
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--imageTextBackgroudHover);
   opacity: 1;
 }
 
@@ -185,8 +186,8 @@ header {
 
 .contact-section {
   padding: 10vh 10vw;
-  background-color: #111;
-  color: white;
+  background-color: var(--backgroudColor);
+  color: var(--textFont);
 }
 
 .contact-container {
@@ -212,38 +213,38 @@ header {
 .contact-section textarea {
   width: 100%;
   padding: 10px;
-  background-color: #222;
-  border: 1px solid #555;
-  color: white;
+  background-color: var(--backgroudColor2);
+  border: 1px solid var(--backgroudColor5);
+  color: var(--textFont);
   border-radius: 4px;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
   outline: none;
-  border-color: #00ccff;
+  border-color: var(--highLight);
 }
 
 .contact-section .btn {
   margin-top: 20px;
   background-color: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid var(--textFont);
+  color: var(--textFont);
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .contact-section .btn:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--textFont);
+  color: var(--textfont3);
 }
 
 .site-footer {
-  background-color: #000;
-  color: white;
+  background-color:var(--black);
+  color: var(--textFont);
   padding: 40px 20px;
   text-align: center;
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--backgroudColor2);
 }
 
 .footer-container {
@@ -279,20 +280,20 @@ header {
 
 .footer-nav a,
 .footer-social a {
-  color: white;
+  color: var(--textFont);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-nav a:hover,
 .footer-social a:hover {
-  color: #00ccff;
+  color: var(--highLight);
 }
 
 .footer-copy {
   grid-area: copy;
   font-size: 0.9rem;
-  color: #aaa;
+  color: var(--footercopy);
 }
 
 /* Animation */
@@ -310,6 +311,6 @@ header {
 }
 
 @media only screen and (max-width: 1000px) {
-  .menu{display: none;}
+  .offOnMobile{display: none;}
 
 }

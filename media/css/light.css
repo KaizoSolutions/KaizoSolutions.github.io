@@ -1,0 +1,18 @@
+:root{
+  --textFont: black; 
+  --textfont2:white;
+  --textfont3:white;
+  --black:#c3c3c3;
+  --backgroudColor:#e7e7e7;
+  --backgroudColor2:#ffffff;
+  --backgroudColor5:#cccccc;
+  --footercopy: #555;
+  --navBarColor: rgba(255,255,255,.6);
+  --highLight:#00ccff;
+  --imageTextBackgroud: rgba(0, 0, 0, 0.3);
+  --imageTextBackgroudHover: rgba(0, 0, 0, 0.6);
+  --backGroundImg:url("/media/imgs/lightBackGround.jpg") no-repeat center center/cover;
+}
+.logo{
+    color: black;
+}
