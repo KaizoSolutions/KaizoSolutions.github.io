@@ -314,3 +314,12 @@ header {
   .offOnMobile{display: none;}
 
 }
+
+
+.btn-tema{
+  height: 1.2rem;
+  width: auto;
+}
+#btn-tema :hover{
+  color: aqua;
+}

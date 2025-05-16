@@ -16,3 +16,7 @@
 .logo{
     color: black;
 }
+
+.btn-darkTheme{
+  display: none;
+}
