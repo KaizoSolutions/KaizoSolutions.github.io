@@ -19,6 +19,7 @@ header {
   height: 100vh;
   z-index: 999;
   background: var(--backGroundImg);
+  --backGroundImg: url("/media/imgs/hero.png") no-repeat center center/cover;
   color: var(--textfont2);
 }
 
@@ -154,20 +155,21 @@ header {
 
 .grid-text {
   position: absolute;
+  width: 100%;
   bottom: 10%;
   margin-left: 0px;
   margin-right: 0px;
   color: var(--textfont2);
   background: var(--imageTextBackgroud);
   padding: 30px 30px;
-  text-align: justify;
+  text-align: center;
   font-size: 1rem;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .grid-image-wrapper:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .grid-image-wrapper:hover .grid-text {
@@ -176,12 +178,11 @@ header {
 }
 
 .grid-item:hover {
-  transform: scale(1.05);
-  z-index: 999;
+  transform: scale(1.02);
 }
 
 .grid-item img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .contact-section {
